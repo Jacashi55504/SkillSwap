@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <title>SkillSwap - Intercambio de Habilidades</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma" />
+  <style>
+    body, h1, h2, h3, h4, h5, h6 {
+      font-family: "Karma", sans-serif;
+    }
+
+    .w3-bar-block .w3-bar-item {
+      padding: 20px;
+    }
+
+    :root {
+      --azul-claro: #00D9FF;
+      --verde-lima: #C1FF72;
+      --azul-petroleo: #3296A8;
+      --blanco: #FFFFFF;
+    }
+
+    .navbar {
+      background-color: var(--azul-petroleo);
+      color: var(--blanco);
+    }
+
+    .navbar .w3-bar-item {
+      font-weight: bold;
+    }
+
+    .hero-section {
+      background-color: var(--verde-lima);
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    .hero-section h1 {
+      color: var(--azul-petroleo);
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
+
+    .hero-section p {
+      color: #444;
+      font-size: 18px;
+    }
+
+    .post-card {
+      background-color: var(--blanco);
+      border: 2px solid var(--azul-claro);
+      border-radius: 10px;
+      padding: 15px;
+      margin-bottom: 20px;
+      text-align: left;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .post-card h3 {
+      color: var(--azul-claro);
+      margin-top: 0;
+    }
+
+    .post-card p {
+      margin: 5px 0;
+    }
+
+    .footer {
+      background-color: var(--azul-petroleo);
+      color: var(--blanco);
+      padding: 20px;
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .logo-bottom {
+      display: block;
+      margin: 40px auto 10px;
+      height: 60px;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Top Nav (sin logo) -->
+<div class="w3-top">
+  <div class="w3-bar navbar w3-large">
+    <a href="index.html" class="w3-bar-item w3-button w3-hide-small">Inicio</a>
+    <a href="publish.html" class="w3-bar-item w3-button w3-hide-small">Publicar</a>
+    <a href="login.html" class="w3-bar-item w3-button w3-hide-small">Iniciar Sesión</a>
+  </div>
+</div>
+
+<!-- Hero Section -->
+<header class="hero-section">
+  <h1>Bienvenido a SkillSwap</h1>
+  <p>Descubre y conecta con personas para enseñar y aprender nuevas habilidades</p>
+</header>
+
+<!-- Página principal -->
+<div class="w3-content w3-padding" style="max-width:1200px; margin-top:40px;">
+
+  <h2 class="w3-center">Publicaciones Recientes</h2>
+
+  <!-- Lista de publicaciones -->
+  <div id="post-list" class="w3-row-padding w3-padding-16 w3-center">
+    <!-- Cards se insertan dinámicamente -->
+  </div>
+
+</div>
+
+<!-- Logo al fondo -->
+<img src="assets/logo.png" alt="SkillSwap Logo" class="logo-bottom">
+
+<!-- Footer -->
+<footer class="footer">
+  <p>&copy; 2025 SkillSwap. Todos los derechos reservados.</p>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

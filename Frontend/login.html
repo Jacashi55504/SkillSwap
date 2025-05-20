@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>SkillSwap - Login y Registro</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma" />
+  <style>
+    body {
+      font-family: 'Karma', sans-serif;
+      background-color: #ffffff;
+      margin: 0;
+    }
+
+    :root {
+      --azul-claro: #00D9FF;
+      --verde-lima: #C1FF72;
+      --azul-petroleo: #3296A8;
+      --blanco: #FFFFFF;
+    }
+
+    .navbar {
+      background-color: var(--azul-petroleo);
+      color: var(--blanco);
+    }
+
+    .navbar .w3-bar-item {
+      font-weight: bold;
+    }
+
+    .auth-container {
+      max-width: 400px;
+      margin: 100px auto;
+      background-color: #f5f5f5;
+      padding: 30px;
+      border-radius: 10px;
+      border: 2px solid var(--azul-claro);
+    }
+
+    .tabs {
+      display: flex;
+      justify-content: space-around;
+      margin-bottom: 20px;
+    }
+
+    .tabs button {
+      flex: 1;
+      padding: 10px;
+      background-color: var(--azul-petroleo);
+      color: white;
+      border: none;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .tabs button.active {
+      background-color: var(--azul-claro);
+    }
+
+    .auth-form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .auth-form input,
+    .auth-form button {
+      padding: 10px;
+      font-size: 16px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+
+    .auth-form button {
+      background-color: var(--azul-claro);
+      color: white;
+      border: none;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .auth-form button:hover {
+      background-color: var(--azul-petroleo);
+    }
+
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar navbar w3-large">
+    <a href="index.html" class="w3-bar-item w3-button">Inicio</a>
+    <a href="publish.html" class="w3-bar-item w3-button">Publicar</a>
+    <a href="login.html" class="w3-bar-item w3-button">Iniciar Sesión</a>
+  </div>
+</div>
+
+<!-- Formulario Login / Registro -->
+<div class="auth-container">
+  <div class="tabs">
+    <button id="btn-login" class="active">Iniciar Sesión</button>
+    <button id="btn-register">Registrarse</button>
+  </div>
+
+  <!-- Login -->
+  <form id="login-form" class="auth-form">
+    <input type="email" id="login-email" placeholder="Correo" required>
+    <input type="password" id="login-password" placeholder="Contraseña" required>
+    <button type="submit">Entrar</button>
+  </form>
+
+  <!-- Registro -->
+  <form id="register-form" class="auth-form hidden">
+    <input type="text" id="reg-name" placeholder="Nombre completo" required>
+    <input type="email" id="reg-email" placeholder="Correo" required>
+    <input type="password" id="reg-password" placeholder="Contraseña" required>
+    <input type="text" id="reg-canTeach" placeholder="¿Qué puedes enseñar? (coma separada)">
+    <input type="text" id="reg-wantToLearn" placeholder="¿Qué deseas aprender? (coma separada)">
+    <button type="submit">Registrarse</button>
+  </form>
+</div>
+
+<script src="js/login.js"></script>
+</body>
+</html>
