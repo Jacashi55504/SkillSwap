@@ -3,8 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SkillSwap - Conecta y Aprende</title>
-  <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/2099/2099191.png">
+  <title>Planes de Subscripción | SkillSwap</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
     :root {
@@ -29,15 +28,6 @@
       padding: 10px 40px;
     }
 
-    .landing-image img {
-      width: 100%;
-      height: auto;
-      display: block;
-      margin-top: 0px;
-      border: none;
-      border-radius: 0;
-    }
-
     .navbar img {
       height: 40px;
     }
@@ -49,28 +39,53 @@
       font-weight: bold;
     }
 
-    .hero {
-      background-color: var(--verde-lima);
+    .plans-section {
+      background-color: #f9f9f9;
       padding: 60px 20px;
       text-align: center;
     }
 
-    .hero h1 {
+    .plans-section h2 {
       font-size: 2.5em;
+      margin-bottom: 10px;
       color: #333;
     }
 
-    .hero p {
+    .plans-section p {
+      max-width: 700px;
+      margin: 0 auto 40px;
       font-size: 1.2em;
       color: #555;
     }
 
-    .post-list {
+    .plans-container {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      padding: 40px;
-      gap: 30px;
+      gap: 40px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .plan-card {
+      flex: 1;
+      min-width: 280px;
+      max-width: 350px;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      padding: 30px;
+      text-align: left;
+    }
+
+    .plan-card h3 {
+      margin-bottom: 15px;
+    }
+
+    .plan-card ul {
+      padding-left: 20px;
+      color: #444;
+      list-style-type: disc;
     }
 
     .footer {
@@ -110,29 +125,54 @@
 </head>
 <body>
 
+  <!-- Navbar -->
   <nav class="navbar">
     <img src="assets/logo.png" alt="SkillSwap Logo">
-    <div id="nav-links">
+    <div>
       <a href="index.html">Inicio</a>
       <a href="publish.html">Publicar</a>
       <a href="sub.html">Subscripciones</a>
-      <!-- El enlace de sesión se genera por JavaScript -->
+      <a href="login.html">Iniciar Sesión</a>
     </div>
   </nav>
 
-  <section class="hero">
-    <h1>Intercambia habilidades con personas reales</h1>
-    <p>Conecta con quienes saben lo que tú quieres aprender y ofrece lo que tú dominas</p>
+  <!-- Sección de Planes -->
+  <section class="plans-section">
+    <h2>Planes de Subscripción</h2>
+    <p>Mejora tu experiencia en SkillSwap y desbloquea funciones exclusivas para aprender y enseñar más rápido.</p>
+
+    <div class="plans-container">
+      <div class="plan-card">
+        <h3 style="color: var(--azul-claro);">SkillSwap Básico</h3>
+        <ul>
+          <li>Acceso limitado a publicaciones</li>
+          <li>Interacción básica con usuarios</li>
+          <li>Perfil visible al público</li>
+          <li>Filtrado simple por habilidades</li>
+        </ul>
+      </div>
+      <div class="plan-card">
+        <h3 style="color: var(--verde-lima);">SkillSwap Plus</h3>
+        <ul>
+          <li>Publicaciones ilimitadas</li>
+          <li>Chat directo con usuarios</li>
+          <li>Destaca tu perfil entre los primeros</li>
+          <li>Alertas de coincidencias personalizadas</li>
+        </ul>
+      </div>
+      <div class="plan-card">
+        <h3 style="color: var(--azul-petroleo);">SkillSwap Pro</h3>
+        <ul>
+          <li>Estadísticas detalladas de tu perfil</li>
+          <li>Mayor visibilidad nacional</li>
+          <li>Prioridad en sugerencias</li>
+          <li>Soporte preferencial</li>
+        </ul>
+      </div>
+    </div>
   </section>
 
-  <section class="landing-image">
-    <img src="assets/habilidades.jpg" alt="Personas compartiendo habilidades">
-  </section>
-
-  <section id="post-list" class="post-list">
-    <!-- Cards generadas por JS -->
-  </section>
-
+  <!-- Footer -->
   <footer class="footer">
     <div>
       <h4>Legal</h4>
@@ -170,28 +210,5 @@
     </div>
   </footer>
 
-  <script src="js/main.js"></script>
-
-  <!-- Script para gestionar sesión -->
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const navContainer = document.getElementById('nav-links');
-      const sessionButton = document.createElement('a');
-
-      if (localStorage.getItem('userId')) {
-        sessionButton.href = "#";
-        sessionButton.textContent = "Cerrar Sesión";
-        sessionButton.addEventListener('click', () => {
-          localStorage.clear();
-          location.reload();
-        });
-      } else {
-        sessionButton.href = "login.html";
-        sessionButton.textContent = "Iniciar Sesión";
-      }
-
-      navContainer.appendChild(sessionButton);
-    });
-  </script>
 </body>
 </html>
